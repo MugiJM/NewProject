@@ -7,7 +7,7 @@
     margin:auto;
 }
 header{
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("Images/images.gif");
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("Images/images.jpeg");
     height:30vh;
     -webkit-background-size: cover;
     background-size:cover;
@@ -15,7 +15,7 @@ header{
     position:relative;
 }
 body{
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("Images/tree-736885__480.gif");
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("Images/tree-736885__480.jpg");
     height:120vh;
     -webkit-background-size: cover;
     background-size:cover;
