@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1"/>
+    <meta name="author" content="Joshua Barrett 2008379, Carlon Warner" />
+    <meta name="assessment" content="Group Work" />
+    <meta name="date" content="November 2,2022" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../Pages/style.css">
+    <script>
+        //displaying age of user
+        function getAge() {
+
+            var birthDate = new Date(document.getElementById("dob").value);
+            var today = new Date();
+
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var m = today.getMonth() - birthDate.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }//end if-statement
+
+            document.getElementById("age").value = age;
+
+        }//end function
+
+    </script>
+</head>
+<header>
+    <div class="top">
+        <div class="logo">
+            <img src="../Images/logo.png"></a>
+            <h1>Welcome To Jeopardy Online!</h1>
+            <h3>The Gameshow must go on!</h3>
+        </div>
+    </div>
+    <a href="#register">
+        <button type="button" class="SignUp">Sign Up Now!</button>
+    </a>
+</header>
+<body>
+<section id="homepage">
+    <div class="background">
+        <div class="info">
+            <p>Jeopardy is a quiz show that's about question and answer in which</br>contestants participate in
+                and are asked questions and presented</br>with clues in the form of answers
+                and contestants must answer in</br>the form of a question. Do you have what it takes?</p></br>
+        </div>
+        <div class="how2play">
+            <p><u>How To Play</u></br>
+                The computer will display a board and then from that board</br>you choose whichever question from whichever category you like.</br>
+                The computer will display the question and the answers</br>and you have 60 seconds to answer. Good luck!</p>
+        </div>
+    </div>
+    </section>
+    <section id="page-background">
+    </div>
+    <div class="registration-form">
+        <!--Registering Player-->
+    <form id="register">
+            <h1>Registration Form</h1>
+            </br></br>
+            <input type="text" id="fname" name="fname" min="3" placeholder="Enter First Name" required>
+            <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+            <input type="text" id="username" name="username" placeholder="Enter User Name" required>
+            <input type="date" id="dob" name="dob" onchange="getAge()" max="2010-12-12" required></br>
+            <input type="number" id="age" name="age" placeholder="Age (Must be 12 and older to play):"  disabled>
+            <input type="text" id="street" name="street" placeholder="Enter Street" required>
+            <input type="text" id="city" name="city" placeholder="Enter City" required>
+            <input type="text" id="town" name="town" placeholder="Enter Town" required>
+            <input type="text" id="country" name="country" placeholder="Enter Country" required>
+            <input type="text" id="education" name="education" placeholder="Primary, Highschool, College etc" required>
+            <input type="email" id="email" name="email" placeholder="123someone@gmail.com" required>
+            <input type="file" id="picture" name="picture" placeholder="Enter Picture of Yourself" required></br>
+            <label for= "genders" required>Gender</label>
+            <select name="genders" id="genders">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button type="submit" class="register-button" onclick="Register()">Register</button>
+            <button type="reset" id="reset" class="reset">Reset</button>
+    </form>
+
+        <textarea  name="showpercentage" placeholder="Your Percentage Score: " onclick="showpercentage()"disabled></textarea>
+        <textarea name="showallplayers" placeholder="List of All PLayers" onclick="showAll()"disabled></textarea>
+        <button type="button" id="results" name="results" placeholder="Results" onclick="findPercentageScore()" disabled>Results</button>
+
+
+    </div>
+</section>
+
+<section id="jeopardy-game">
+    <div id="jeopardy">
+     <span id="score"><h3>Your Score: </h3></span>
+    </div>
+    <div class="background"></div>
+    <button type="button"  class="play-Game" onclick="PlayGame()">Play</button>
+    <button type="button"  class="end-Game" onclick="findPercentageScore()">Quit</button>
+    <button type="button"  class="play-Again" onclick="PlayGame()">Play Again</button>
+</section>
+<footer id="footer">
+    <p>
+        <small>
+            Copyright &copy; 2022 by Joshua Barrett, Carlon Warner , & King. <br/>
+            Created November 2022
+        </small>
+    </p>
+</footer>
+<script src="../NewProject/game.js"></script>
+</body>
+</html>
