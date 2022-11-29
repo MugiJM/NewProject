@@ -50,7 +50,7 @@ body{
 }
 
 .background{
-    
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("Images/cropgif2.gif");
     height:100vh;
     -webkit-background-size: cover;
     background-size:cover;
